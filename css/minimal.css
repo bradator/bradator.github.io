@@ -1,0 +1,179 @@
+/* no tan minimal*/
+/*reseteo por default*/
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    margin: 0;
+    /*El overflow:hidden; te deshabilita el scroll*/
+    overflow:auto;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    line-height: 1.5;
+    font-family: tahoma;
+    font-size: 71.5%;
+    color: aqua;
+    background-color: rgb(43, 226, 113);
+}
+
+
+/*Bienvenida a la ENSALADA DE FRUTA, va a ser todo caotico hasta que lleguemos a la parte ZEN*/
+.header{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    min-height: 59px;
+    font-size: 1rem;
+    /*EFECTO HAMBURGUESA QUEDA PARA EL ORTO*/
+    /*
+    background-image: linear-gradient(180deg, rgb(238, 157, 8), rgba(34, 25, 25, 0.5), transparent);
+    */
+    background-color: powderblue;
+    /*UN gradiente recontra buenisimo re 3D inspirado en la bandera sueca de la foto*/
+    /*
+        background-image: linear-gradient(180deg, rgb(238, 157, 8), rgba(34, 25, 25, 0.5), transparent);
+    */
+    /*
+    background-image: linear-gradient(180deg, rgb(238, 157, 8), rgba(34, 25, 25, 0.5), transparent);
+    */
+
+    mix-blend-mode: luminosity;
+}
+
+.header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.header ul li{
+    position: 0 1em;
+    padding: 1em;
+}
+
+.header ul li a{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 599;
+    color:oldlace;
+}
+
+.header ul li a::after{
+
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    content: '';
+    width:0;
+    height: 3px;
+    /*efectito espctacular de transicion aplicado en el subrayado*/
+    transition: all 0.2s linear;
+}
+
+.header ul li a:hover::after{
+
+    width: 100%;
+    background-color:oldlace;
+    /*
+    background-color: cyan;
+    */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+section{
+
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-grow: column wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    background-image: url(/media/fondo1.jpg);
+    background-size: cover;
+    /*scroll-snap-align: center;*/
+}
+
+
+section h2{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 10px 21px;
+    color:oldlace;
+    background-color:powderblue;
+    pointer-events: none;
+    user-select: none;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+section:nth-child(2){
+    background-image: url(/media/fondo2.jpg);
+    background-size: cover;
+    background-position:center;
+}
+section:nth-child(3){
+    background-image: url(/media/intro.mp4);
+    background-size: cover;
+    background-position:center;
+}
+section:nth-child(4){
+    background-image: url(/media/fondo4.png);
+}
+
+/*Termina ENSALADA DE FRUTA, gracias por venir*/
+
+/*Comienza ZEN WIN ARE THE CHAMPIONS*/
+.historia{
+display: flex;
+flex-direction: column;
+
+}
+
+.contactomapa{
+    display: flex;
+    flex-direction: column;
+    
+    }
+/*
+video{
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: center;
+}
+
+
+*/
+
+/* ESTE DEL FINAL ES UN HITLER RESERVADO PARA EL HDP DE BOOTSTRAP*/
+/* ESTO NO PUEDE ESTAR BIEN */
+.mb-4{
+
+    display: flex;
+    flex-direction:column;
+    background-image: url(/media/fondo4.jpg);
+    font-size: x-large;
+    color:antiquewhite;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+
+}
+
+.mb-4 h2{
+    text-shadow: none;
+}
